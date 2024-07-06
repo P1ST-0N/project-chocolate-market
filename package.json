@@ -5,22 +5,55 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "vite --port 3001",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "lint:fix": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0 --fix",
+    "preview": "vite preview",
+    "prepare": "husky",
+    "test": "echo 'test finished successfully'"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.6",
+    "aos": "^2.3.4",
+    "axios": "^1.7.2",
+    "clsx": "^2.1.1",
+    "formik": "^2.4.6",
+    "modern-normalize": "^2.0.0",
+    "overlayscrollbars-react": "^0.5.6",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.2.1",
+    "react-loader-spinner": "^6.1.6",
+    "react-modal": "^3.16.1",
+    "react-redux": "^9.1.2",
+    "react-responsive": "^10.0.0",
+    "react-select": "^5.8.0",
+    "react-transition-group": "^4.4.5",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.77.6",
+    "swiper": "^11.1.4",
+    "vite-plugin-style-import": "^2.0.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
     "vite": "^5.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
