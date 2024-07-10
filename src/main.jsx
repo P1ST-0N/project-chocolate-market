@@ -8,13 +8,8 @@ import App from './App.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <Provider
-    store={store}
-    > */}
-    {/* <PersistGate
-      loading={null}
-      persistor={persistore}
-    > */}
+    {/* <Provider store={store}> */}
+    {/* <PersistGate loading={null} persistor={persistore}> */}
     <App />
     {/* </PersistGate> */}
     {/* </Provider> */}
