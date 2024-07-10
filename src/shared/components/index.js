@@ -1,0 +1,10 @@
+export { default as MainTitle } from './MainTitle/MainTitle';
+export { default as Logo } from './Logo/Logo';
+export { default as Container } from './Container/Container';
+export { default as Button } from './Button/Button';
+export { default as SharedLayout } from './SharedLayout/SharedLayout';
+export { default as BasketButton } from './BasketButton/BasketButton';
+export { default as SocialMedia } from './SocialMedia/SocialMedia';
+export { default as ArrowUp } from './ArrowUp/ArrowUp';
+export { default as MainText } from './MainText/MainText';
+export { default as ModalWindow } from './ModalWindow/ModalWindow';
