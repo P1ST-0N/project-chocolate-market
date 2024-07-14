@@ -1,0 +1,86 @@
+.detailInfrom {
+  background-color: $primary-modal-color;
+  border-radius: 24px;
+  padding: 40px 10px 30px;
+
+  @include media(tablet) {
+    padding: 45px 30px 30px;
+  }
+
+  @include media(desktop) {
+    display: flex;
+    gap: 45px;
+  }
+}
+
+.detailImage {
+  display: block;
+  border-radius: 24px;
+  width: 340px;
+  margin-bottom: 20px;
+
+  @include media(tablet) {
+    width: 400px;
+  }
+
+  @include media(desktop) {
+    width: 590px;
+    margin-bottom: 0;
+  }
+}
+
+.detailTitle {
+  @include font(18, 24);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  margin-bottom: 5px;
+}
+
+.detailCategory {
+  @include font(14, 18);
+  letter-spacing: -0.02em;
+  color: $primary-text-black-color;
+  margin-bottom: 18px;
+}
+
+.detailInfoThumb {
+  @include media(tablet) {
+    margin-bottom: 30px;
+  }
+
+  @include media(desktop) {
+    height: 260px;
+    padding-right: 15px;
+  }
+}
+
+.detailDescription {
+  @include font(16, 20);
+  letter-spacing: 0.04em;
+
+  margin-bottom: 14px;
+}
+
+.detailCompound {
+  @include font(17, 21);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  margin-bottom: 15px;
+}
+
+.detailInfromAboutProduct {
+  width: 340px;
+
+  @include media(tablet) {
+    width: 400px;
+  }
+
+  @include media(desktop) {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

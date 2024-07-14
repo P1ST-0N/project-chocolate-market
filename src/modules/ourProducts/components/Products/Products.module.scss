@@ -1,0 +1,42 @@
+.containerLoader {
+  display: flex;
+  justify-content: center;
+}
+
+.productSection {
+  position: relative;
+  height: 480px;
+  border-radius: 15px;
+  border: 1px solid $primary-border-color;
+  background-color: $primary-white-color;
+  padding: 32px 52px;
+}
+
+.productSectionMore {
+  @include media(tablet) {
+    position: relative;
+  }
+}
+
+.productList {
+  @include media(tablet) {
+    width: 640px !important;
+  }
+
+  @include media(desktop) {
+    width: 980px !important;
+  }
+}
+
+.prodactItem {
+  @include media(tablet) {
+    height: 335px;
+    width: 270px !important;
+    border-radius: 15px;
+    border: 1px solid $primary-border-color;
+    background-color: $primary-white-color;
+    padding: 32px 20px;
+
+    cursor: pointer;
+  }
+}

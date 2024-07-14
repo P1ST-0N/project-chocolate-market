@@ -1,0 +1,33 @@
+.totalPrice {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media(desktop) {
+    gap: 20px;
+  }
+}
+
+.totalTitle {
+  @include font(20, 26);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.btnOrangeStyle {
+  background-color: $primary-main-color;
+  border-radius: 100px;
+  transition:
+    background-color $animation,
+    color $animation;
+
+  &:hover,
+  &:active {
+    color: $primary-main-color;
+    background-color: $primary-hover-color;
+  }
+}
