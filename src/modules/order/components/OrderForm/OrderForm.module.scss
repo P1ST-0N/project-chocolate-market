@@ -1,0 +1,27 @@
+.formOrder {
+  @include media(desktop) {
+    width: 600px;
+  }
+}
+
+.btnOrangeStyle {
+  width: 100%;
+  background-color: $primary-main-color;
+  border-radius: 100px;
+  transition:
+    background-color $animation,
+    color $animation;
+  margin-bottom: 20px;
+
+  &:hover,
+  &:active {
+    color: $primary-main-color;
+    background-color: $primary-hover-color;
+  }
+
+  @include media(desktop) {
+    @include font(18, 26);
+    letter-spacing: 0.04em;
+    padding: 15px 0;
+  }
+}

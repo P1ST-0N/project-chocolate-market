@@ -1,0 +1,190 @@
+.btnBackToBuy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @include font(16, 24);
+  letter-spacing: 0.04em;
+
+  margin-left: auto;
+  margin-bottom: 15px;
+
+  @include media(desktop) {
+    @include font(18, 24);
+    margin-bottom: 20px;
+  }
+}
+
+.backToBuy {
+  width: 24px;
+  height: 24px;
+  fill: transparent;
+  stroke: $primary-black-color;
+
+  @include media(desktop) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.yourOrder {
+  background-color: $primary-modal-color;
+  border-radius: 24px;
+  padding: 20px 16px;
+
+  @include media(tablet) {
+    padding: 32px;
+  }
+
+  @include media(desktop) {
+    width: 700px;
+  }
+}
+
+.titleOrder {
+  @include font(18, 28);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 15px;
+
+  @include media(tablet) {
+    @include font(20, 28);
+  }
+
+  @include media(desktop) {
+    @include font(24, 28);
+  }
+}
+
+.thumbOrder {
+  margin-bottom: 20px;
+
+  @include media(tablet) {
+    margin-bottom: 32px;
+  }
+}
+
+.productCartList {
+  height: 344px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include media(tablet) {
+    height: 370px;
+  }
+}
+
+.productCartItem {
+  display: flex;
+  gap: 10px;
+
+  @include media(tablet) {
+    gap: 16px;
+  }
+}
+
+.productCartPhoto {
+  width: 100px;
+  border-radius: 20px;
+
+  @include media(tablet) {
+    width: 120px;
+  }
+}
+
+.productOrderInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 5px;
+
+  @include media(tablet) {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  @include media(desktop) {
+    padding-right: 20px;
+  }
+}
+
+.productOrder {
+  @include font(16, 24);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+
+  @include media(desktop) {
+    @include font(18, 24);
+  }
+}
+
+.totalOrderPrice {
+  @include font(16, 24);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  @include media(desktop) {
+    @include font(18, 24);
+  }
+}
+
+.totalBlock {
+  border-top: 1px solid $primary-darkgrey-color;
+  padding-top: 22px;
+
+  @include media(tablet) {
+    padding-top: 24px;
+  }
+}
+
+.calculeteDiscount {
+  text-align: right;
+}
+
+.firstTotal {
+  text-decoration: line-through;
+  margin-bottom: 5px;
+
+  @include font(12, 18);
+  letter-spacing: 0.04em;
+
+  @include media(tablet) {
+    @include font(16, 24);
+  }
+
+  @include media(desktop) {
+    @include font(18, 26);
+  }
+}
+
+.discount {
+  margin-bottom: 10px;
+  @include font(12, 18);
+  letter-spacing: 0.04em;
+
+  @include media(tablet) {
+    @include font(16, 24);
+  }
+
+  @include media(desktop) {
+    @include font(18, 26);
+  }
+}
+
+.totalOrder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include font(16, 24);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  @include media(tablet) {
+    @include font(20, 24);
+  }
+
+  @include media(desktop) {
+    @include font(24, 28);
+  }
+}

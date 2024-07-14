@@ -1,0 +1,19 @@
+.titleContacts {
+  @include font(18, 25);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  margin-bottom: 15px;
+
+  @include media(tablet) {
+    @include font(20, 28);
+
+    margin-bottom: 20px;
+  }
+
+  @include media(desktop) {
+    @include font(24, 28);
+
+    margin-bottom: 10px;
+  }
+}
