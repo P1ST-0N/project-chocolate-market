@@ -1,0 +1,114 @@
+.thumbMenu {
+  display: block;
+  margin-left: auto;
+  transition: transform $animation;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.mobileMenu {
+  width: 28px;
+  height: 28px;
+  stroke: $primary-white-color;
+  margin-right: 15px;
+  transition: stroke $animation;
+
+  &:active {
+    stroke: $primary-main-color;
+  }
+}
+
+.navList {
+  display: none;
+
+  @include media(tablet) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  @include media(desktop) {
+    gap: 40px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  background-color: $primary-text-black-color;
+  opacity: 1;
+}
+
+.overlayMenu {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 220px;
+  height: 100%;
+  background-color: $dark-bg-color;
+  z-index: 50;
+  transition: right $animation;
+
+  &.entered {
+    right: 0;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.closeMenu {
+  width: 30px;
+  height: 30px;
+  stroke: $primary-white-color;
+  transition: stroke $animation;
+
+  &:active {
+    stroke: $primary-main-color;
+  }
+}
+
+.navMenuMobile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: absolute;
+  top: 136px;
+  right: 46px;
+  z-index: 3;
+
+  @include media(tablet) {
+    display: none;
+  }
+}
+
+.iconMobile {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 18px;
+}
+
+.headerContainer {
+  @include media(tablet) {
+    border: 1px solid $primary-text-white-color;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+
+    padding: 0 10px;
+  }
+
+  @include media(desktop) {
+    padding: 0 30px;
+  }
+}

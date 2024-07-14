@@ -1,0 +1,51 @@
+.navListItem {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: $primary-white-color;
+  @include font(14, 16);
+  transition: color $animation;
+  position: relative;
+  cursor: pointer;
+
+  &:hover,
+  :active {
+    color: $primary-main-color;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    display: block;
+    background-color: $primary-main-color;
+    transform: scaleX(0);
+    width: 100%;
+    height: 1px;
+    transition: transform $animation;
+  }
+
+  &::before {
+    bottom: -14px;
+  }
+
+  &:hover::before,
+  :active::before,
+  &:hover::after,
+  :active::after {
+    transform: scaleX(1);
+  }
+
+  &.activeLink {
+    color: $primary-main-color;
+
+    &::before,
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+
+  @include media(desktop) {
+    @include font(16, 20);
+  }
+}

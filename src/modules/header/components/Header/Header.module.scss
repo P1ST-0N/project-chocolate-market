@@ -1,0 +1,21 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+
+  width: 100%;
+  max-width: unset;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 5px;
+  padding: 0 20px;
+
+  @include media(tablet) {
+    justify-content: center;
+    padding-top: 10px;
+    margin-top: 0;
+  }
+}
