@@ -1,0 +1,251 @@
+.tasteList {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @include media(tablet) {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  @include media(desktop) {
+    justify-content: center;
+    gap: 35px;
+  }
+}
+
+.tasteItem {
+  position: relative;
+  overflow: hidden;
+
+  &.odd {
+    .tasteBlock {
+      background-color: $primary-main-color;
+    }
+  }
+
+  &.even {
+    .tasteBlock {
+      background-color: $primary-black-color;
+    }
+  }
+}
+
+.thumbImage {
+  position: absolute;
+  z-index: 3;
+  top: 15px;
+  left: 70px;
+
+  @include media(tablet) {
+    left: 13px;
+  }
+
+  @include media(desktop) {
+    left: 34px;
+  }
+}
+
+.imgBlock {
+  width: 200px;
+  height: 200px;
+  background-color: $primary-main-arrow-color;
+  box-shadow: $primary-shadow-color;
+  border-radius: 200px;
+
+  @include media(desktop) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.imgTaste {
+  width: 200px;
+  position: absolute;
+  bottom: 12px;
+
+  @include media(desktop) {
+    width: 300px;
+  }
+}
+
+.tasteBlock {
+  height: 400px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 90px 55px 30px;
+  margin-top: 145px;
+
+  @include media(tablet) {
+    width: 222px;
+    padding: 115px 25px 30px;
+    margin-top: 120px;
+  }
+
+  @include media(desktop) {
+    width: 370px;
+    height: 475px;
+
+    padding: 160px 25px 50px;
+    margin-top: 180px;
+  }
+
+  &.even {
+    .tasteTitle,
+    .textTaste {
+      color: $primary-white-color;
+    }
+
+    .arrowIcon {
+      stroke: $primary-white-color;
+      fill: transparent;
+      transition: stroke $animation;
+
+      &:active {
+        stroke: $primary-main-color;
+      }
+    }
+  }
+}
+
+.tasteTitle {
+  @include font(20, 26);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+
+  margin-bottom: 10px;
+
+  @include media(tablet) {
+    @include font(17, 22);
+    margin-bottom: 20px;
+  }
+
+  @include media(desktop) {
+    @include font(25, 32);
+  }
+}
+
+.thumbIconDote {
+  display: flex;
+  justify-content: center;
+}
+
+.thumbIcon {
+  position: absolute;
+  bottom: 15px;
+  left: 150px;
+
+  @include media(tablet) {
+    left: 98px;
+  }
+
+  @include media(desktop) {
+    left: 160px;
+  }
+}
+
+.doteIcon {
+  width: 25px;
+  height: 25px;
+  fill: $primary-white-color;
+  margin-bottom: 10px;
+
+  @include media(tablet) {
+    margin-bottom: 20px;
+  }
+
+  @include media(desktop) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.arrowIcon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  stroke: $primary-text-color;
+  fill: transparent;
+
+  animation: moveArrow 1s infinite alternate;
+  transition: stroke $animation;
+
+  &:active {
+    stroke: $primary-white-color;
+    fill: transparent;
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(15px);
+  }
+}
+
+.textTaste {
+  @include font(13, 22);
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin-bottom: 33px;
+
+  @include media(tablet) {
+    @include font(12, 20);
+  }
+
+  @include media(desktop) {
+    @include font(15, 22);
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 145px;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  border-radius: 24px;
+  background-color: $primary-hover-color;
+  padding: 80px 15px 0;
+
+  transform: translateX(-100%);
+  transition: transform $animation;
+
+  &.activeOverlay {
+    transform: translateX(0);
+  }
+
+  @include media(tablet) {
+    top: 120px;
+    padding: 105px 15px 0;
+  }
+
+  @include media(desktop) {
+    top: 180px;
+    height: 475px;
+    padding: 180px 25px 50px;
+  }
+}
+
+.resetMargin {
+  margin-bottom: 10px;
+}
+
+.arrowIconLeft {
+  width: 40px;
+  height: 40px;
+  stroke: $primary-text-color;
+  fill: transparent;
+  cursor: pointer;
+  animation: moveArrow 1s infinite alternate;
+
+  &:active {
+    stroke: $primary-main-color;
+  }
+}
