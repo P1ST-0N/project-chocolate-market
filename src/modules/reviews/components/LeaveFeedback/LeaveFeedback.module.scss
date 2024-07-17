@@ -1,0 +1,217 @@
+.btnBorderColor {
+  display: block;
+  border: 1px solid $primary-main-color;
+  border-radius: 100px;
+  transition:
+    background-color $animation,
+    color $animation;
+  color: $primary-text-color;
+
+  &:hover,
+  &:active {
+    background-color: $primary-main-color;
+    color: $primary-white-color;
+  }
+
+  margin: 0 auto;
+}
+
+.imgSubscribe {
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.formReview {
+  padding: 220px 15px 35px;
+
+  @include media(tablet) {
+    padding: 220px 30px 35px;
+  }
+}
+
+.reviewTitle {
+  @include font(20, 24);
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+
+  @include media(tablet) {
+    @include font(24, 28);
+    margin-bottom: 30px;
+  }
+}
+
+.accentMainTitle {
+  color: $primary-main-color;
+}
+
+.fieldThumb {
+  position: relative;
+  width: 100%;
+}
+
+.formInput {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid $primary-input-color;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+  background-color: transparent;
+  outline: transparent;
+  color: $primary-text-color;
+
+  transition: border-color $animation;
+
+  margin-bottom: 20px;
+  padding: 13px 18px;
+
+  &:focus,
+  &:hover {
+    border: 1px solid $primary-main-color;
+  }
+
+  &:hover + .formLabel {
+    color: $primary-main-color;
+  }
+
+  @include media(tablet) {
+    padding: 22px 24px;
+    font-size: 18px;
+  }
+}
+
+.formLabel {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  transition:
+    top $animation,
+    font-size $animation,
+    color $animation;
+  pointer-events: none;
+  color: $primary-placeholder-color;
+
+  @include media(tablet) {
+    top: 24px;
+    left: 24px;
+    font-size: 18px;
+  }
+}
+
+.formInput:focus + .formLabel,
+.formInput:not(:placeholder-shown) + .formLabel {
+  top: -7px;
+  font-size: 12px;
+  background-color: $primary-white-color;
+  padding: 0 5px;
+  color: $primary-main-color;
+
+  @include media(tablet) {
+    font-size: 16px;
+  }
+}
+
+.formInputPhone {
+  padding-left: 100px;
+
+  @include media(tablet) {
+    padding-left: 115px;
+  }
+}
+
+.formPhone {
+  padding-left: 118px;
+
+  @include media(tablet) {
+    padding-left: 140px;
+  }
+}
+
+.wrapperCode {
+  position: absolute;
+  top: 11px;
+  left: 18px;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  border-right: 3px solid $primary-placeholder-color;
+  padding-right: 10px;
+
+  @include media(tablet) {
+    top: 17px;
+    left: 24px;
+  }
+}
+
+.iconFlag {
+  width: 24px;
+  height: 24px;
+
+  @include media(tablet) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.codeNaumber {
+  @include font(16, 14);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+
+  @include media(tablet) {
+    @include font(18, 22);
+  }
+}
+
+.formTextarea {
+  height: 91px;
+  resize: none;
+
+  @include media(tablet) {
+    height: 137px;
+  }
+}
+
+.errorName {
+  border-color: $error-input-color;
+}
+
+.errorSpan {
+  display: block;
+  color: $error-input-color;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+.btnSubscribe {
+  background-color: $primary-main-color;
+  width: 100%;
+  border-radius: 100px;
+  transition:
+    background-color $animation,
+    color $animation;
+
+  &:hover,
+  &:active {
+    color: $primary-main-color;
+    background-color: $primary-hover-color;
+  }
+}
+
+.formInput:-webkit-autofill,
+.formInput:-webkit-autofill:hover,
+.formInput:-webkit-autofill:focus {
+  -webkit-text-fill-color: $primary-black-color;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: transparent;
+}
