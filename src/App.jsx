@@ -1,4 +1,4 @@
-import { MainPage } from './pages';
+// import { MainPage } from './pages';
 // import { SharedLayout } from 'shared/components';
 
 import AOS from 'aos';
@@ -11,7 +11,7 @@ function App() {
     <>
       qwe
       {/* <SharedLayout> */}
-      <MainPage />
+      {/* <MainPage /> */}
       {/* </SharedLayout> */}
     </>
   );
