@@ -1,0 +1,17 @@
+.socialIcon {
+  width: 22px;
+  height: 22px;
+  stroke: $primary-white-color;
+  fill: transparent;
+  transition: stroke $animation;
+
+  &:active,
+  &:hover {
+    stroke: $primary-main-color;
+  }
+
+  @include media(tablet) {
+    width: 24px;
+    height: 24px;
+  }
+}
