@@ -1,0 +1,36 @@
+.logo {
+  font-family: $logo-font-family;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  @include font(14, 18);
+  letter-spacing: -0.03em;
+  color: $primary-white-color;
+
+  display: flex;
+  align-items: center;
+
+  @include media(desktop) {
+    @include font(20, 20);
+  }
+}
+
+.logoImg {
+  width: 50px;
+  height: 50px;
+
+  @include media(tablet) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @include media(desktop) {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.accentLogo {
+  font-style: normal;
+  color: $primary-main-color;
+}
