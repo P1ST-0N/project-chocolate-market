@@ -1,0 +1,58 @@
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formInput {
+  @include font(16, 24);
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid $primary-input-color;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+  background-color: $primary-modal-color;
+  outline: transparent;
+  color: $primary-text-color;
+
+  transition: border-color $animation;
+
+  padding: 13px 18px;
+
+  &::placeholder {
+    color: $primary-placeholder-color;
+  }
+
+  &:focus,
+  &:hover {
+    border: 1px solid $primary-main-color;
+  }
+
+  @include media(desktop) {
+    @include font(18, 26);
+    padding: 15px 20px;
+  }
+
+  &.error {
+    border-color: $error-input-color;
+  }
+}
+
+.formTextarea {
+  height: 100px;
+  resize: none;
+
+  @include media(tablet) {
+    height: 137px;
+  }
+
+  @include media(desktop) {
+    height: 108px;
+  }
+}
+
+.errorSpan {
+  color: $error-input-color;
+  font-size: 12px;
+
+  @include media(desktop) {
+    @include font(14, 18);
+  }
+}
