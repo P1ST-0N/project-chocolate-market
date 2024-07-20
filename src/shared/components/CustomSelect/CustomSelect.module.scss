@@ -1,0 +1,21 @@
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-bottom: 15px;
+
+  @include media(desktop) {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.formLabel {
+  @include font(16, 24);
+  letter-spacing: 0.04em;
+
+  @include media(desktop) {
+    @include font(18, 26);
+  }
+}
