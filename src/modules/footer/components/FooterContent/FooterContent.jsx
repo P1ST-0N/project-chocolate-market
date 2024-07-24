@@ -28,8 +28,8 @@ const FooterContent = () => {
             </a>
           </li>
           <li>
-            <a className={style.footerLink} href="mailto:simplychoc@gmail.com">
-              simplychoc@gmail.com
+            <a className={style.footerLink} href="mailto:support@gmail.com">
+              supportExample@gmail.com
             </a>
           </li>
         </ul>
