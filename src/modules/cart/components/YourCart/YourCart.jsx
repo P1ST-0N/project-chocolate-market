@@ -11,7 +11,7 @@ const YourCart = ({ closeCartModal, isOpen }) => {
   const orderModal = useModal(true);
   const products = useSelector((state) => state.cart.products);
   const totalPrice = products.reduce(
-    (acc, item) => acc + parseFloat(item.product.price) + item.quantity,
+    (acc, item) => acc + parseFloat(item.product.price) * item.quantity,
     0
   );
 
@@ -21,7 +21,6 @@ const YourCart = ({ closeCartModal, isOpen }) => {
     } else {
       document.body.style.overflow = 'unset';
     }
-
     return () => {
       document.body.style.overflow = 'unset';
     };

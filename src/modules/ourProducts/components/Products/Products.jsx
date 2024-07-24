@@ -25,12 +25,9 @@ const Products = ({ currentCategory }) => {
   useEffect(() => {
     const dataProduct = async () => {
       try {
-        // console.log('Fetching products...');
         const productsData = await getProducts();
-        // console.log('Products fetched:', productsData);
         setProducts(productsData);
       } catch (error) {
-        // console.error('Error fetching products:', error);
         toast.error('Something went wrong :( Please reload the page.');
       } finally {
         setLoading(false);

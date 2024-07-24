@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 
 import style from './HeroSlide.module.scss';
-
 import imagesHero from 'modules/mainPageHero/helpers/imagesHero';
 
 const HeroSlide = () => {
@@ -15,7 +14,6 @@ const HeroSlide = () => {
         prevSlide === imagesHero.length - 1 ? 0 : prevSlide + 1
       );
     }, 4000);
-
     return () => clearInterval(interval);
   }, [currentSlide]);
 

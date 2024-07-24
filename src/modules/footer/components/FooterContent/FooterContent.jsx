@@ -29,7 +29,7 @@ const FooterContent = () => {
           </li>
           <li>
             <a className={style.footerLink} href="mailto:simplychoc@gmail.com">
-              thisYourEmail@gmail.com
+              simplychoc@gmail.com
             </a>
           </li>
         </ul>

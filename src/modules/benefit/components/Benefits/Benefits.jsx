@@ -4,7 +4,7 @@ import style from './Benefits.module.scss';
 import { icons as sprite } from 'shared/icons';
 import { imagesDesktop2x } from 'shared/images';
 import SectionMain from 'shared/components/SectionMain/SectionMain';
-import { useMedia } from 'hooks/index';
+import { useMedia } from 'hooks/useMedia';
 
 const Benefits = () => {
   const { isTablet, isDesktop } = useMedia();
@@ -13,7 +13,7 @@ const Benefits = () => {
     <SectionMain className={style.benefitsSection}>
       <h2 className={style.visuallyHidden}>Benefits</h2>
       <div className={style.benefitsThumb}>
-        {isTablet && isDesktop && (
+        {(isTablet || isDesktop) && (
           <img
             className={style.benefitsImgUp}
             src={imagesDesktop2x.lineUp2x}

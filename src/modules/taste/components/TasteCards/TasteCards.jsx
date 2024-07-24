@@ -1,7 +1,7 @@
 import tasteDescription from 'modules/taste/helpers/tasteDescription';
-import { useState } from 'react';
 import style from './TasteCards.module.scss';
 import { icons as sprite } from 'shared/icons';
+import { useState } from 'react';
 
 const TasteCards = () => {
   const [activeIndex, setActiveIndex] = useState(null);

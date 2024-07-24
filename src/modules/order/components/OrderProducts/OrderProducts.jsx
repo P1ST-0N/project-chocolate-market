@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import CustomScrollWrapper from 'shared/components/CustomScrollWrapper/CustomScrollWrapper';
-import style from './OrderProducts.module.scss';
 import { scrollToElementById } from 'helpers/scrollToElementById';
+import style from './OrderProducts.module.scss';
 import { icons as sprite } from 'shared/icons';
 import PromocodeForm from '../PromocodeForm/PromocodeForm';
 

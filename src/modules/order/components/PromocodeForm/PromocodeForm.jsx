@@ -19,7 +19,7 @@ const PromocodeForm = ({ onApplyPromocode }) => {
 
       actions.resetForm();
     } catch (error) {
-      if (Number(error.message) === 400) {
+      if (Number(error.message) === 404) {
         toast.error('No promocode found');
       }
     }
