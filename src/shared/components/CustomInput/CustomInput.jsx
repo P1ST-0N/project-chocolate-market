@@ -5,7 +5,6 @@ import style from './CustomInput.module.scss';
 const CustomInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   const id = useId();
-
   return (
     <div className={style.formGroup}>
       <label className={style.formLabel} htmlFor={id}>

@@ -20,30 +20,24 @@ const cartSlice = createSlice({
       } else {
         state.products.push({ product, quantity });
       }
-
       state.totalQuantity += quantity;
     },
-
     deleteProduct(state, action) {
       const productId = action.payload;
       const deletedProduct = state.products.find(
         (product) => product.product._id === productId
       );
-
       if (deletedProduct) {
         state.totalQuantity -= deletedProduct.quantity;
       }
-
       state.products = state.products.filter(
         (product) => product.product._id !== productId
       );
     },
-
     removeAllProducts(state) {
       state.products = [];
       state.totalQuantity = 0;
     },
-
     increaseQuantity(state, action) {
       const productId = action.payload;
       const product = state.products.find(
@@ -54,7 +48,6 @@ const cartSlice = createSlice({
         state.totalQuantity += 1;
       }
     },
-
     decreaseQuantity(state, action) {
       const productId = action.payload;
       const product = state.products.find(
